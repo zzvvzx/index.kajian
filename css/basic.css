@@ -10,7 +10,7 @@ body,
 div{
   margin:0;
 }
-a{color:inherit}
+a{color:green}
 a:hover{color:teal}
 li{list-style:none}
 
@@ -64,7 +64,7 @@ li > span:nth-child(8){
   text-decoration:underline;
 }
 li > span:nth-child(9){
+  margin-left:.2rem;
   color:green;
   text-decoration:underline;
 }
-

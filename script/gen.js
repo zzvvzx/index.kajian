@@ -6,6 +6,7 @@ const PATH_drive = ROOT + "data/BYH. Al-Hikam/drive.json";
 const PATH_dur   = ROOT + "data/BYH. Al-Hikam/dur.txt";
 
 const URL_home = "https://zzvvzx.github.io/zaman.old/";
+const URL_source = "https://www.youtube.com/playlist?list=PLZlkOj3-mAkD8WfxMydcTXHiagq5IV-G9";
 const URL_download_item = "https://drive.google.com/uc?id=";
 const URL_download_all = "https://drive.google.com/drive/folders/1-ELEIlePwqMhvdCLkJV0ofNy8kqa3Evt";
 
@@ -26,8 +27,8 @@ for(let i=0; i<files.length; i++){
   html += `
 <li>
   <span>${i+1}</span>
-  <span>${files[i].name.substr(4)}</span>
-  <span>2019/11/05</span>
+  <span>${files[i].name.slice(4,-5)}</span>
+  <span>9/18/2019</span>
   <span>8Kbp/s(opus)</span>
   <span>${(dur[i] || "").substr(0,8)}</span>
   <span>${(files[i].size/1000000).toFixed(2)}Mb</span><br>
@@ -41,7 +42,7 @@ for(let i=0; i<files.length; i++){
 
 let out = `
 <!DOCTYPE html>
-<title>z20</title>
+<title>zaman.old</title>
 <meta content='width=device-width,initial-scale=1,shrink-to-fit=no' name='viewport'/>
 <link href='css/basic.css' rel='stylesheet'/>
 
@@ -57,6 +58,7 @@ Last update: ${new Date().toLocaleString()}<br>
   <span>Total duration: ${totaldur} hours (${totalitem} items)</span>
   <span>Total size: ${(totalsize/1000000).toFixed(2)}Mb</span>
   <span>Filetype: Audio/opus 8k</span>
+  <span class="dl-all"><a href="${URL_source}" target="blank">Source</a></span>
   <span class="dl-all"><a href="${URL_download_all}" target="blank">Download All</a></span>
 </div>
 
@@ -66,5 +68,4 @@ Last update: ${new Date().toLocaleString()}<br>
 
 
 fs.writeFileSync(PATH_out, out);
-
 
