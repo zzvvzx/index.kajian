@@ -1,6 +1,6 @@
 'use strict';
 
-const ROOT       = "/storage/sdcard0/Download/z2019/";
+const ROOT       = "/storage/sdcard0/Download/zaman.old/";
 const PATH_out   = ROOT + "index.html";
 const PATH_drive = ROOT + "data/BYH. Al-Hikam/drive.json";
 const PATH_dur   = ROOT + "data/BYH. Al-Hikam/dur.txt";
@@ -47,9 +47,9 @@ let out = `
 
 <div class="nav">
 Last update: ${new Date().toLocaleString()}<br>
-<a href="../help.html">Situs apa ini?</a>
+<a href="help.html">Situs apa ini?</a>
 <br><br>
-<a href="../">Home</a> / BYH. Al-Hikam</div>
+<a href="">Home</a> / BYH. Al-Hikam</div>
 <div class="info">
   <span>Title: Kajian Kitab Al-Hikam</span>
   <span>Ustaz: Buya Yahya</span>
@@ -66,6 +66,5 @@ Last update: ${new Date().toLocaleString()}<br>
 
 
 fs.writeFileSync(PATH_out, out);
-
 
 
