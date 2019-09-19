@@ -13,7 +13,7 @@ div{
 a{color:green}
 a:hover{color:teal}
 li{list-style:none}
-
+pre{font-family:inherit;white-space:pre-wrap}
 
 
 .nav{
@@ -54,9 +54,6 @@ li > span:nth-child(2){
 }
 li > span:nth-child(3){
   margin-left:2.5rem;
-}
-li > span:nth-child(4){
-  display:none;
 }
 li > span:nth-child(8){
   margin-left:2.5rem;
