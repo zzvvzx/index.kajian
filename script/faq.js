@@ -1,11 +1,17 @@
+'use strict';
 
+const fs   = require('fs');
+const ROOT = "/storage/sdcard0/Download/zaman.old/";
+const PATH_out = ROOT + "faq.html";
+
+let out = `
 <!DOCTYPE html>
 <title>Faq - kajian.zaman.old</title>
 <meta content='width=device-width,initial-scale=1,shrink-to-fit=no' name='viewport'/>
 <link href='css/basic.css' rel='stylesheet'/>
 
 <div class="nav">
-Last update: 9/19/2019, 3:33:54 PM<br>
+Last update: ${new Date().toLocaleString()}<br>
 <a href="index.html">Home</a><br>
 
 <pre>
@@ -34,3 +40,6 @@ backup jg kalo2 youtube down
  kritik & saran: IG @zzv.zx
 
 </pre
+`;
+
+fs.writeFileSync(PATH_out, out);

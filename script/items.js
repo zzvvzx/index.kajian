@@ -27,7 +27,6 @@ const URL_download_all = `https://drive.google.com/drive/folders/${META.drive_fo
 const file = fs.readFileSync(PATH_drive);
 const dur  = fs.readFileSync(PATH_dur).toString().split("\n");
 const files = JSON.parse(file).files;
-files.reverse();
 
 let html = "";
 let totalsize = 0;
@@ -41,7 +40,7 @@ for(let i=0; i<files.length; i++){
   <span>${files[i].name.slice(4,-5)}</span>
   <span>9/18/2019</span>
   <span>${(dur[i] || "").substr(0,8)}</span>
-  <span>${(files[i].size/1000000).toFixed(2)}Mb</span><br>
+  <span>${(files[i].size/1048576).toFixed(2)}Mb</span><br>
   <span><a href="${URL_download_item + files[i].id}&export=download" target="blank">Download</a></span>
   <span><a href="${URL_download_item + files[i].id}" target="blank">Play Now</a></span>
 </li>`;
@@ -64,7 +63,7 @@ Last update: ${new Date().toLocaleString()}<br>
   <span>Ustaz: ${META.ustaz}</span>
   <span>Source: ${META.source_name}</span>
   <span>Total duration: ${totaldur} hours (${totalitem} items)</span>
-  <span>Total size: ${(totalsize/1000000).toFixed(2)}Mb</span>
+  <span>Total size: ${(totalsize/1048576).toFixed(2)}Mb</span>
   <span>Filetype: ${META.filetype}</span>
   <span class="dl-all"><a href="${URL_source}" target="blank">Source</a></span>
   <span class="dl-all"><a href="${URL_download_all}" target="blank">Download All</a></span>
@@ -74,5 +73,4 @@ Last update: ${new Date().toLocaleString()}<br>
 
 fs.writeFileSync(PATH_out, out);
 };
-
 
