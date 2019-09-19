@@ -55,12 +55,12 @@ li > span:nth-child(2){
 li > span:nth-child(3){
   margin-left:2.5rem;
 }
-li > span:nth-child(8){
+li > span:nth-child(7){
   margin-left:2.5rem;
   color:green;
   text-decoration:underline;
 }
-li > span:nth-child(9){
+li > span:nth-child(8){
   margin-left:.2rem;
   color:green;
   text-decoration:underline;
