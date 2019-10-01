@@ -1,12 +1,12 @@
 'use strict';
 
 const fs   = require('fs');
-const ROOT = "/storage/sdcard0/Download/zaman.old/";
+const ROOT = "/storage/sdcard0/Download/script/pengumpul.ilmu/";
 const PATH_out = ROOT + "faq.html";
 
 let out = `
 <!DOCTYPE html>
-<title>Faq - kajian.zaman.old</title>
+<title>Faq - Pengumpul Ilmu</title>
 <meta content='width=device-width,initial-scale=1,shrink-to-fit=no' name='viewport'/>
 <link href='css/basic.css' rel='stylesheet'/>
 

@@ -2,8 +2,8 @@
 
 const fs   = require('fs');
 
-const ROOT = "/storage/sdcard0/Download/zaman.old/data/";
-const DIR  = fs.readdirSync(ROOT);
+const ROOT     = "/storage/sdcard0/Download/script/pengumpul.ilmu/data/";
+const DIR      = fs.readdirSync(ROOT);
 const PATH_out = ROOT + "../index.html";
 
 function time(x){ var h=~~(x/3600),m=~~(x/60)%60,s=~~(x)%60; return (h?(h<10?"0":"")+h+":":"")+((m<10)&&h?"0":"")+m+":"+(s<10?"0":"")+s };
@@ -19,14 +19,14 @@ for(let i=0; i<DIR.length; i++){
 <li>
   <span>${i+1}</span>
   <span><a href="data/${d}/">${d}</a></span>
-  <span>${META.date} / ${time(parseFloat(META.total_duration)*3600)} ${META.total_size}Mb</span>
+  <span>${time(parseFloat(META.total_duration)*3600)} / ${META.total_size}Mb - ${META.total_items} items</span>
 </li>`;
 };
 
 
 let out = `
 <!DOCTYPE html>
-<title>Help - zaman.old</title>
+<title>Pengumpul Ilmu</title>
 <meta content='width=device-width,initial-scale=1,shrink-to-fit=no' name='viewport'/>
 <link href='css/basic.css' rel='stylesheet'/>
 

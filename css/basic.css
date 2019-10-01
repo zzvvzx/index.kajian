@@ -15,7 +15,7 @@ a:hover{color:teal}
 li{list-style:none}
 pre{font-family:inherit;white-space:pre-wrap}
 
-
+.pre{white-space:pre;font-family:monospace;}
 .nav{
   padding:1rem 1rem;
 }
