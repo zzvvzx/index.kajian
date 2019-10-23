@@ -1,8 +1,14 @@
+@font-face {
+  font-family: "Corporate Rounded Regular";
+  src: url("Corporate Rounded Regular.ttf") format("truetype");
+}
+
+
 html{
   background:#000;
   color:#777;
   font-size:85%;
-  font-family:monospacex;
+  font-family:'Corporate Rounded Regular', consolas, arial, sans;
 }
 
 html,
@@ -14,7 +20,15 @@ a{color:green}
 a:hover{color:teal}
 li{list-style:none}
 pre{font-family:inherit;white-space:pre-wrap}
-
+button{
+  width:100%;
+  font:inherit;
+  text-align:left;
+  color:inherit;
+  background-color:inherit;
+  border:none;
+  outline:none;
+}
 .pre{white-space:pre;font-family:monospace;}
 .nav{
   padding:1rem 1rem;
@@ -30,6 +44,11 @@ pre{font-family:inherit;white-space:pre-wrap}
 }
 .list{
   padding:0 1rem 3rem 0;
+}
+
+
+body{
+  padding-top:1rem;
 }
 
 

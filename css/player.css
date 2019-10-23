@@ -1,0 +1,94 @@
+
+
+
+#PLAYER{
+  position:fixed;
+  z-index:1;
+  top:0;
+  left:0;
+  width:100%;
+  background:#000;
+  color:#fff;
+}
+#PLAYER-upper{
+  position:relative;
+  height:4rem;
+}
+#PLAYER-bars{
+  position:relative;
+  height:1rem;
+  color:#fff;
+}
+
+
+
+/* upper */
+#PLAYER-play{
+  position:fixed;
+  top:2rem;
+  right:1rem;
+  width:3rem;
+  height:3rem;
+  background-color:green;
+  background-repeat:no-repeat;
+  background-size:50%;
+  background-position:center;
+  border-radius:50%;
+}
+#PLAYER-more{
+  left:auto;
+  right:0;
+}
+#PLAYER-title-cover{
+  position:absolute;
+  top:0;
+  left:12%;
+  padding:0 .5rem;
+  width:76%;
+  height:100%;
+  line-height:1rem;
+}
+.PLAYER-title-centered{
+  position:relative;
+  top: 50%;
+  transform:translateY(-50%);
+}
+#PLAYER-title{
+  font-weight:500;
+}
+#PLAYER-artist{
+  display:block;
+  font-size:70%;
+  font-style:italic;
+  line-height:1.2rem;
+}
+
+
+
+/* bars */
+.PLAYER-bar{
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+}
+#PLAYER-barText{
+  width:calc(100% - 2rem);
+  padding:0 1rem;
+  text-align:right;
+  line-height:1rem;
+  font-size:60%;
+  color:#ddd;
+}
+#PLAYER-barBg{
+  width:100%;
+  background:#007000;
+}
+.PLAYER--playing #PLAYER-barBg{ background:#000 }
+#PLAYER-barBuffered{ background:#222 }
+#PLAYER-barPlayed{ background:green }
+#PLAYER-status{ float:left }
+#PLAYER-barCov{ width:100% }
+
+
+
